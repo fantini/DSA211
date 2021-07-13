@@ -272,7 +272,7 @@ tm_shape(distritos_dados) +
 load("percepcao_lojas.RData")
 
 # Questionário proposto
-questionario <- image_read("questionário.png")
+questionario <- image_read("question�rio.png")
 
 plot(questionario)
 

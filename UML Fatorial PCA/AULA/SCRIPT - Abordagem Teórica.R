@@ -260,6 +260,10 @@ cortest.bartlett(R = rho)
 # De onde vem o p-valor do teste de efericidade de Bartlett?
 pchisq(q = 192.3685, df = 6, lower.tail = FALSE)
 
+# OBS: com isso, podemos identificar que p-valor È consider·velmente
+# inferior a 0,05, ou seja, as correlaÁıes de Pearson entre os pares de
+# vari·veis s„o estatisticamente diferentes de 0.
+
 
 # Passo 2: A defini√ß√£o propriamente dita dos fatores ----------------------
 
@@ -549,8 +553,8 @@ correlacoes_entre_fatores_df %>%
 correlacoes_entre_fatores_df %>% 
   t() %>% 
   data.frame() %>% 
-  rownames_to_column("vari√°veis") %>% 
-  ggplot(aes(x = F1, y = F2, label = vari√°veis)) +
+  rownames_to_column("variaveis") %>% 
+  ggplot(aes(x = F1, y = F2, label = variaveis)) +
   geom_point(color = "dodgerblue4",
              size = 2) +
   geom_text_repel() +
@@ -563,4 +567,4 @@ correlacoes_entre_fatores_df %>%
                                                 digits = 2),"%)"))) +
   theme_bw()
 
-# Fim da abordagem te√≥rica ------------------------------------------------
+# Fim da abordagem te√≥rica -----------------------------------------------
