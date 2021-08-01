@@ -1,0 +1,28 @@
+{
+    "id": "8037C5E3",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1627856807981.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "id": "26852cf8665c441badc3c9ae7e67b77c",
+        "name": "acm_arquivo02",
+        "title": "acm_arquivo02",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 3756066008849540210,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1627856807981,
+    "read_only": false,
+    "read_only_alternatives": []
+}

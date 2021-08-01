@@ -1,0 +1,28 @@
+{
+    "id": "397BBCB6",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1627857794326.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "id": "01cfa5c4ccd045799a9d1e10bb9fdbf8",
+        "name": "anacor_arquivo01",
+        "title": "anacor_arquivo01",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1627856761,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1627857794326,
+    "read_only": false,
+    "read_only_alternatives": []
+}
