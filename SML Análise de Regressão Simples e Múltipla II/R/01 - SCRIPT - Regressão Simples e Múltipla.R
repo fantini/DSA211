@@ -69,10 +69,16 @@ modelo_tempodist <- lm(formula = tempo ~ distancia,
 #Observando os parâmetros do modelo_tempodist
 summary(modelo_tempodist)
 
+# Como p-value do F = 0.0003144 < 0.05, há modelo estatisticamente significante
+# a 95% de nível de confiança!
+
 #Outras maneiras de apresentar os outputs do modelo
 #função summ do pacote jtools
 summ(modelo_tempodist, confint = T, digits = 4, ci.width = .95)
 export_summs(modelo_tempodist, scale = F, digits = 4)
+
+#outra forma 
+anova(modelo_tempodist)
 
 #Salvando fitted values (variável yhat) e residuals (variável erro) no dataset
 tempodist$yhat <- modelo_tempodist$fitted.values
