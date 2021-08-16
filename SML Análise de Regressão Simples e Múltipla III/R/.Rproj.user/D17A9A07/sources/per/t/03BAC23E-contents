@@ -530,6 +530,9 @@ summary(modelo_linear)
 #Shapiro-Francia: n > 30
 sf.test(modelo_linear$residuals) #função sf.test do pacote nortest
 
+#Como p-value do teste SF < 0.05 (0.000143), não há aderência entre a
+#distribuição normal e a distribuição real dos resíduos!
+
 #Histograma dos resíduos do modelo OLS linear
 bebes %>%
   mutate(residuos = modelo_linear$residuals) %>%
