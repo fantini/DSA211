@@ -1,19 +1,19 @@
 {
-    "id": "6A8715B2",
+    "id": "C01B710E",
     "path": "~/DSA211/SML Análise de Regressão Simples e Múltipla IV/R/01 - SCRIPT - Regressão Simples e Múltipla.R",
     "project_path": "01 - SCRIPT - Regressão Simples e Múltipla.R",
     "type": "r_source",
     "hash": "940815320",
     "contents": "",
     "dirty": false,
-    "created": 1629238000275.0,
+    "created": 1629667527065.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "944,0",
-        "scrollLine": "929"
+        "cursorPosition": "1149,0",
+        "scrollLine": "1134"
     },
     "folds": "",
     "lastKnownWriteTime": 1627442438,
