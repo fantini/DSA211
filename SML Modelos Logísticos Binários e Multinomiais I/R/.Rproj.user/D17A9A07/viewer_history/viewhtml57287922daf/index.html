@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="lib/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="lib/kePrint-0.0.1/kePrint.js"></script>
+<link href="lib/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+</head>
+<body>
+<table class="table table-striped" style="font-size: 25px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> estudante </th>
+   <th style="text-align:right;"> atrasado </th>
+   <th style="text-align:right;"> dist </th>
+   <th style="text-align:right;"> sem </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Gabriela </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.5 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Patrícia </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.3 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gustavo </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.4 </td>
+   <td style="text-align:right;"> 8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Letícia </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 23.5 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Luiz Ovídio </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 9.5 </td>
+   <td style="text-align:right;"> 8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Leonor </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Dalila </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Antônio </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 15.4 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Júlia </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 14.7 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mariana </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 14.7 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Roberto </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.7 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Renata </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Guilherme </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 18.4 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Rodrigo </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11.0 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Giulia </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Felipe </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Karina </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 14.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Pietro </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11.2 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cecília </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gisele </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Elaine </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 17.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Kamal </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Rodolfo </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Pilar </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.0 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Vivian </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11.7 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Danielle </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 17.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Juliana </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 14.4 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Adriano </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Adelino </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Carolina </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cristina </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 9.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Eduardo </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 15.8 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Zenilda </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 16.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cintia </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Raimundo </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.9 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Luciana </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 13.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Emerson </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Raquel </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 14.0 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Anna Luiza </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Claudio </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11.6 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Moara </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.3 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Fernanda </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 22.0 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Edson </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 29.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Nuno </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 18.7 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Bráulio </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 22.0 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Marcelo </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 19.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lucia </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 15.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Camilo </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 15.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Filomena </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12.8 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lídia </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 13.2 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gilmar </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 16.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Itamar </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Tatiana </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 19.0 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Alessandra </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Ester </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 17.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Marcela </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 19.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Viviane </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 15.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Bianca </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 20.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Angélica </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 15.5 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Frederico </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 17.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Franklin </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 15.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Inácio </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 17.0 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lilian </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 14.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lucio </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 15.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Soraya </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Amanda </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 13.8 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cristiane </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 13.0 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cida </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 17.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Zilda </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 13.0 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Ana Lúcia </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 13.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Robson </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 28.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Renato </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 17.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Marina </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Flavia </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 18.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Adriana </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 14.8 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Alexandre </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Cleber </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12.1 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Paola </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Ana Paula </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 17.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Andréa </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10.2 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Shirley </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11.0 </td>
+   <td style="text-align:right;"> 17 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Edinalva </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 18.7 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Ernani </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12.2 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Afonso </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Reinaldo </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11.5 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> César </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Bruna </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 14.2 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Márcia </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 13.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Fabiana </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Rebeca </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 11.0 </td>
+   <td style="text-align:right;"> 18 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Sandra </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 12.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Geovani </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 15.4 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Rita </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 17.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Giovanna </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 19.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Jaqueline </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10.1 </td>
+   <td style="text-align:right;"> 15 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Sheila </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 24.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Pedro </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10.0 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Horácio </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 9.4 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Leandro </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 14.2 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Estela </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 13 </td>
+  </tr>
+</tbody>
+</table> <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}})</script><script async src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
