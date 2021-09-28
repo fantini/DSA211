@@ -3,7 +3,7 @@
     "path": "~/GitHub/DSA211/SML Modelos de Regressão para Dados de Contagem I/R/script adicional contagem 01.R",
     "project_path": "script adicional contagem 01.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "2384635879",
     "contents": "",
     "dirty": false,
     "created": 1632605429673.0,
@@ -11,7 +11,9 @@
     "relative_order": 2,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "19,20",
+        "scrollLine": "1"
     },
     "folds": "",
     "lastKnownWriteTime": 1631682112,

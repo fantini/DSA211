@@ -1,26 +1,26 @@
 {
-    "id": "28497BC1",
-    "path": "~/GitHub/DSA211/SML Modelos de Regressão para Dados de Contagem I/R/03 - SCRIPT - Modelos para Dados de Contagem.R",
+    "id": "741ED7D7",
+    "path": "~/GitHub/DSA211/SML Modelos de Regrassão para Dados de Contagem II/R/03 - SCRIPT - Modelos para Dados de Contagem.R",
     "project_path": "03 - SCRIPT - Modelos para Dados de Contagem.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
-    "dirty": true,
-    "created": 1632172455975.0,
+    "dirty": false,
+    "created": 1632685639987.0,
     "source_on_save": false,
-    "relative_order": 2,
+    "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "54,1",
-        "scrollLine": "38"
+        "cursorPosition": "271,0",
+        "scrollLine": "243"
     },
     "folds": "",
     "lastKnownWriteTime": 1631225660,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1632607080897,
+    "last_content_update": 1631225660,
     "read_only": false,
     "read_only_alternatives": []
 }
