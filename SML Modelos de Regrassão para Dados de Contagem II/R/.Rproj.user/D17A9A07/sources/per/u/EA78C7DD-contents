@@ -1,0 +1,12 @@
+load(file = "corruption.RData")
+
+modelo_prova_bneg <- glm.nb(formula = violations ~ staff + post + corruption, 
+                            data = corruption,
+                            init.theta = 0.4770222578, link=log)
+summary(modelo_prova_bneg)
+
+predict(object = modelo_prova_bneg, #linha 144 deste script
+        newdata = data.frame(staff = 28,
+                             post = "no",
+                             corruption = 1),
+        type = "response")

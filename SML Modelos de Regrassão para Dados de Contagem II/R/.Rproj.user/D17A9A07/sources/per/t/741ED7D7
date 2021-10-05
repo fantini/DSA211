@@ -3,7 +3,7 @@
     "path": "~/GitHub/DSA211/SML Modelos de Regrassão para Dados de Contagem II/R/03 - SCRIPT - Modelos para Dados de Contagem.R",
     "project_path": "03 - SCRIPT - Modelos para Dados de Contagem.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "1576436979",
     "contents": "",
     "dirty": false,
     "created": 1632685639987.0,
@@ -12,8 +12,8 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "271,0",
-        "scrollLine": "243"
+        "cursorPosition": "302,0",
+        "scrollLine": "278"
     },
     "folds": "",
     "lastKnownWriteTime": 1631225660,
