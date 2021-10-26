@@ -299,7 +299,7 @@ autoplot(prev.naive) # repete o último valor
 prev.snaive <- snaive(a10, h = 12) 
 autoplot(prev.snaive)
 
-# Método mais comum ############################################################
+# Método mais comum #############################################################
 
 # ARIMA ########################################################################
 
@@ -367,7 +367,7 @@ plot.ts(skirtsseriesdiff2)
 kings <- scan("http://robjhyndman.com/tsdldata/misc/kings.dat",skip=3) # ignora as 3 primeiras linhas da base
 kings # avaliando a base
 kingstimeseries <- ts(kings) # salvando os dados no formato de séries temporais (ST)
-plot.ts(kingstimeseries)
+plot.ts(skirtsseries)
 
 kingtimeseriesdiff1 <- diff(kingstimeseries, differences=1) # aplicando a primeira diferença
 plot.ts(kingtimeseriesdiff1)
@@ -439,7 +439,7 @@ pacf(kingtimeseriesdiff1, lag.max=20, plot=FALSE) # captando os valores da autoc
 
 ###### EXEMPLO 2 ###############################################################
 
-# Carregando a base Volcanodust - poeira vulcânica entre 1500 e 1969
+# Carregando a base Volcanodust - poeira sobre a poeira vulcânica entre 1500 e 1969
 # Fonte: Hipel and Mcleod, 1994
 volcanodust <- scan("http://robjhyndman.com/tsdldata/annual/dvi.dat", skip=1)
 volcanodustseries <- ts(volcanodust,start=c(1500))
