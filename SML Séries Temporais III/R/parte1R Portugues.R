@@ -101,3 +101,4 @@ plot(airpass) # plotando a série
 
 # Avalie com uma lag longo para avaliar a sazonalidade
 adf.test(airpass, k=12)
+adf.test(airpass)
