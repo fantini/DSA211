@@ -71,23 +71,25 @@ where
 	EXISTS (select * from ear e where e."ISN" = c."ISN")
 
 -- filtrar condutores ativos
+with ear as (
+	select 
+		"ISN"
+	from 
+		sa_condutor.tb_condutor_codobscnh
+	where
+		codobscnh = '15'
+)
 select 
-	count(*) 
+	"ISN" as isn, numrg, numpgu, tipocondutor, codsexo, datanascimento, categoriareal, categoriavigente, cpf,
+	date_part('year', age(to_date(lpad(datanascimento::TEXT, 8, '0'), 'DDMMYYYY'))) as idade,
+	case when 1 = (select 1 from ear where ear."ISN" = c."ISN") then 1 else 0 end as ear
 from 
-	sa_condutor.tb_condutor 
-where 
-	to_date(lpad(datavalidade::TEXT, 8, '0'), 'DDMMYYYY') > '2022-01-14'
-	and numpgu is not null and numpgu <> 0 
-	and (codhist is null or codhist <> 205)
-
-select 
-	"ISN" as isn, numrg, numpgu, codsexo, datanascimento, categoriareal, categoriavigente, cpf 
-from 
-	sa_condutor.tb_condutor 
+	sa_condutor.tb_condutor c
 where
-	to_date(lpad(datavalidade::TEXT, 8, '0'), 'DDMMYYYY') > '2022-01-14'
-	and numpgu is not null and numpgu <> 0 
-	and (codhist is null or codhist <> 205)
-	and tipocondutor = '2'
-limit 10000 offset 0
-		
+	numpgu is not null and numpgu <> 0
+	and substring(lpad(datavalidade::TEXT, 8, '0'), 5, 8) >= '2022'	
+	and (codhist is null or codhist <> 205)	
+	and to_date(lpad(datavalidade::TEXT, 8, '0'), 'DDMMYYYY') > '2022-01-01'
+	and "ISN" not in (14605362, 165019)
+order by
+	idade desc;
