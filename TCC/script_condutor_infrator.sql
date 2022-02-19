@@ -21,7 +21,7 @@
 
 select 
 	numregcnh, indtipocnh, datainfracao, horainfracao, codmunicinfracao, marcamodeloveic, 
-	indsuspensao, codtipoinstrumento, indreincidencia, ei.codtipogravidade, ei.qtdepontos, ei.codresp, ei.indsupensao
+	codtipoinstrumento, indreincidencia, ei.codtipogravidade, ei.qtdepontos, ei.codresp, ei.indsuspensao
 from 
 	sa_pontuacao.tb_infratorpontuacao i
 left join
