@@ -1,0 +1,28 @@
+{
+    "id": "5825A67D",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1645101653187.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "id": "f70b6be5f79d4f66aaaa3044af07e8b8",
+        "name": "arvore",
+        "title": "arvore",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 3539864629733243190,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1645101653187,
+    "read_only": false,
+    "read_only_alternatives": []
+}

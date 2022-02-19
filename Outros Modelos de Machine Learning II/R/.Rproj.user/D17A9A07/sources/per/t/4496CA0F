@@ -1,0 +1,24 @@
+{
+    "id": "4496CA0F",
+    "path": "~/GitHub/DSA211/Outros Modelos de Machine Learning II/R/OMML2_script02_bootstrapping.R",
+    "project_path": "OMML2_script02_bootstrapping.R",
+    "type": "r_source",
+    "hash": "4271347690",
+    "contents": "",
+    "dirty": false,
+    "created": 1645130597895.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1644791008,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1644791008,
+    "read_only": false,
+    "read_only_alternatives": []
+}

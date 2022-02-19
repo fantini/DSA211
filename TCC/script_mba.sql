@@ -53,23 +53,6 @@ where
 	and codsitpontuacao = 0 and (indadvertencia is null or indadvertencia <> 1)
 	and u.codsexo in (1,2) and u.datanascimento BETWEEN '1900-01-01' and '2005-01-01'
 
--- base de condutores: condutores que possuem ear
-with ear as (
-	select 
-		"ISN"
-	from 
-		sa_condutor.tb_condutor_codobscnh
-	where
-		codobscnh = '15'
-)
-select 
-	numpgu, tipocondutor, codsexo, datanascimento, categoriareal 
-from 
-	sa_condutor.tb_condutor c
-where
-	tipocondutor = '2' and
-	EXISTS (select * from ear e where e."ISN" = c."ISN")
-
 -- filtrar condutores ativos
 with ear as (
 	select 
@@ -93,3 +76,38 @@ where
 	and "ISN" not in (14605362, 165019)
 order by
 	idade desc;
+
+-- script final
+create MATERIALIZED view sa_condutor.view_condutor as
+with ear as (
+	select 
+		"ISN"
+	from 
+		sa_condutor.tb_condutor_codobscnh
+	where
+		codobscnh = '15'
+)
+select 
+	"ISN" as isn, numrg as rg, numpgu as cnh, tipocondutor as tipo, 
+	codsexo, datanascimento, categoriareal, categoriavigente, cpf,
+	date_part('year', age(to_date(lpad(datanascimento::TEXT, 8, '0'), 'DDMMYYYY'))) as idade,
+	case when 1 = (select 1 from ear where ear."ISN" = c."ISN") then 1 else 0 end as ear
+from 
+	sa_condutor.tb_condutor c
+where
+	numpgu is not null and numpgu <> 0
+	and substring(lpad(datavalidade::TEXT, 8, '0'), 5, 8) >= '2022'	
+	and (codhist is null or codhist <> 205)	
+	and to_date(lpad(datavalidade::TEXT, 8, '0'), 'DDMMYYYY') > '2022-01-01'
+	and "ISN" not in (14605362)
+	and tipocondutor = '2'
+with no data;
+
+refresh MATERIALIZED view sa_condutor.view_condutor
+
+create MATERIALIZED view sa_condutor.view_condutor_final as
+select c.*, case when ic is not null then 1 else 0 end as multa, case when ic.curso = 1 then 1 else 0 end as curso
+from sa_condutor.view_condutor c left join sa_condutor.tb_condutor_infrator_curso ic on c.cnh = substring(ic.cnh::text, 0, length(ic.cnh::text)-1)::bigint
+with no data;
+
+refresh MATERIALIZED view sa_condutor.view_condutor_final;
