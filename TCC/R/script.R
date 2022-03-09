@@ -2,6 +2,8 @@
 #carregando condutores
 condutores <- read_csv("condutores-20220216.csv")
 
+head(condutores)
+
 condutores$codsexo = factor(condutores$codsexo)
 condutores$ear = factor(condutores$ear)
 condutores$multa = factor(condutores$multa)
@@ -25,10 +27,10 @@ treino %>% str
 
 #criando arvore
 arvore <- rpart(
-  curso ~ codsexo + ear + categoriavigente + multa,
+  curso ~ codsexo + ear + categoriavigente + multa + idade,
   data = treino,
 #  method = 'class',
-  control = rpart.control(cp = -1, maxdepth = 4)
+  control = rpart.control(cp = -0.5, maxdepth = 4)
 )
 
 arvore$frame
