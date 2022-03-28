@@ -20,7 +20,9 @@ select p.numprocesso,
 	count(rp) as examespraticos 
 from sa_dut.tb_processo p 
 	left join sa_dut.tb_motivoprocesso mp using(numprocesso)
-	left join sa_dut.tb_resultadoteorico rt using(numprocesso)
-	left join sa_dut.tb_resultadopratico rp using(numprocesso)
-	left join sa_dut.tb_resultadomedico rm using(numprocesso)
+	left join sa_dut.tb_resultadoteorico rt using(numprocesso)	
+	left join sa_dut.tb_agendamentopratico ap using(numprocesso)
+	left join sa_dut.tb_resultadopratico rp using(ap.numpauta)
+	left join sa_dut.tb_agendamentomedico am using(numprocesso)
+	left join sa_dut.tb_resultadomedico rm using(am.numpauta)
 where mp.codmot = 1 and p.codsitprocesso = 99 group by p.numprocesso 
